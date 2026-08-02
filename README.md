@@ -81,7 +81,7 @@ The KPI slicer on the portfolio dashboard covers more than 30 metrics, including
 | Units Summary | `assets/Wotels - portfolio file-6.png` |
 | Overhead Summary | `assets/Wotels - portfolio file-7.png` |
 
-Live version of these screenshots is embedded on the [case study page](https://ortensa-adhamidhi.github.io/wotels-case-study/assets.html) and in the accompanying [presentation deck](./Wotels_Case_Study.pptx).
+Live version of these screenshots is embedded on the [case study page](https://ortensa-adhamidhi.github.io/portfolio/wotels.html) and in the accompanying [presentation deck](./Wotels_Case_Study.pptx).
 
 ## Repository Structure
 
