@@ -29,7 +29,7 @@ Every month end close meant reconciling exports from three systems by hand, with
 - A SQL Server connection pulling P&L actuals from Primavera
 - DAX measures for Actual vs. Budget vs. Last Year, with YTD roll ups
 - Row level security by property and department
-- Five linked reports: a portfolio KPI dashboard, Units and Overhead P&L statements, variance drill downs, and executive summaries
+- Seven linked report pages: a portfolio KPI dashboard, monthly and budget/YTD comparison views for both Units and Overhead P&L, and two executive summary dashboards
 
 ## Data Model
 
@@ -62,7 +62,7 @@ Movimentos  OccupancyByPeriod         Budget      Statistics
 | Budget source | Excel |
 | Access control | Row level security |
 
-A single semantic model sits underneath all five reports. Power Query handles ingestion from the three source systems, DAX handles the variance and YTD logic, and row level security controls what each property manager or department head can see. The model is designed to extend as new reporting layers are added on top.
+A single semantic model sits underneath all seven report pages. Power Query handles ingestion from the three source systems, DAX handles the variance and YTD logic, and row level security controls what each property manager or department head can see. The model is designed to extend as new reporting layers are added on top.
 
 ## KPI Coverage
 
@@ -75,34 +75,36 @@ The KPI slicer on the portfolio dashboard covers more than 30 metrics, including
 
 ## Screenshots
 
-| Report | Preview |
-|---|---|
-| KPI Dashboard | `assets/Wotels - portfolio file-1.png` |
-| Units Summary | `assets/Wotels - portfolio file-6.png` |
-| Overhead Summary | `assets/Wotels - portfolio file-7.png` |
+| # | Report | Preview |
+|---|---|---|
+| 1 | KPI Dashboard | `assets/Wotels - portfolio file-1.png` |
+| 2 | Units P&L, Monthly Overview | `assets/Wotels - portfolio file-2.png` |
+| 3 | Units P&L, Budget & YTD Comparison | `assets/Wotels - portfolio file-3.png` |
+| 4 | Overhead P&L, Monthly Overview | `assets/Wotels - portfolio file-4.png` |
+| 5 | Overhead P&L, Budget & YTD Comparison | `assets/Wotels - portfolio file-5.png` |
+| 6 | Units Summary (executive) | `assets/Wotels - portfolio file-6.png` |
+| 7 | Overhead Summary (executive) | `assets/Wotels - portfolio file-7.png` |
 
-Live version of these screenshots is embedded on the [case study page](https://ortensa-adhamidhi.github.io/portfolio/wotels.html) and in the accompanying [presentation deck](./Wotels_Case_Study.pptx).
+All seven are embedded directly on the [case study page](https://ortensa-adhamidhi.github.io/portfolio/wotels.html).
 
 ## Repository Structure
 
 ```
-wotels-case-study/
+wotels/
 ├── assets/
-│   └── wotels/
-│       ├── Wotels - portfolio file-1.png
-│       ├── Wotels - portfolio file-2.png
-│       ├── Wotels - portfolio file-3.png
-│       ├── Wotels - portfolio file-4.png
-│       ├── Wotels - portfolio file-5.png
-│       ├── Wotels - portfolio file-6.png
-│       └── Wotels - portfolio file-7.png
+│   ├── Wotels - portfolio file-1.png
+│   ├── Wotels - portfolio file-2.png
+│   ├── Wotels - portfolio file-3.png
+│   ├── Wotels - portfolio file-4.png
+│   ├── Wotels - portfolio file-5.png
+│   ├── Wotels - portfolio file-6.png
+│   └── Wotels - portfolio file-7.png
 ├── queries/
 │       ├── Credentials.pq
 │       ├── DateRanges.pq
 │       ├── fnGetOccupancy.pq
 │       ├── OccupancybyPeriod.pq
 │       └── Properties.pq
-├── Wotels_Case_Study.pptx
 └── README.md
 ```
 
@@ -124,7 +126,7 @@ This is a portfolio case study built from a real freelance engagement. To protec
 
 - All property names, brand names, and area manager names have been replaced with fictional equivalents.
 - All financial figures, occupancy numbers, and guest data shown are synthetic.
-- The Power BI file (`.pbix`) is not published publicly, but you can download it on this repository.
+- The Power BI file (`.pbix`) is available on request while this case study is being finished.
 
 ## Contact
 
